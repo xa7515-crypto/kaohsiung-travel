@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄景點導覽</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; background: #f5f5f5; color: #333; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0d47a1 0%, #42a5f5 50%, #80d8ff 100%);
+            color: white; text-align: center; padding: 80px 20px 60px;
+        }
+        .hero h1 { font-size: 2.8em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.2em; opacity: 0.9; }
+        
+        /* Nav */
+        nav { background: #0d47a1; padding: 12px 20px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 0.95em; transition: opacity 0.3s; }
+        nav a:hover { opacity: 0.7; }
+        
+        /* Section */
+        .section { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .section h2 { text-align: center; font-size: 2em; margin-bottom: 30px; color: #0d47a1; border-bottom: 3px solid #42a5f5; display: inline-block; padding-bottom: 5px; }
+        .section-title { text-align: center; }
+        
+        /* Cards */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card {
+            background: white; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .card-img {
+            width: 100%; height: 220px; object-fit: cover;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 4em;
+        }
+        .card-body { padding: 20px; }
+        .card-body h3 { font-size: 1.3em; margin-bottom: 8px; color: #0d47a1; }
+        .card-body p { color: #555; line-height: 1.7; font-size: 0.95em; }
+        .tag { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; margin-top: 10px; margin-right: 5px; }
+        
+        /* Footer */
+        footer { background: #0d47a1; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
+        footer p { opacity: 0.8; font-size: 0.9em; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2em; }
+            nav a { margin: 0 8px; font-size: 0.85em; }
+            .cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>高雄景點導覽</h1>
+    <p>探索南台灣最美城市 —— 海港、山城、美食、文化</p>
+</div>
+
+<nav>
+    <a href="#attractions">景點推薦</a>
+    <a href="#food">美食專區</a>
+    <a href="#tips">旅遊資訊</a>
+</nav>
+
+<!-- 景點推薦 -->
+<div class="section" id="attractions">
+    <div class="section-title"><h2>景點推薦</h2></div>
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-img">🌊</div>
+            <div class="card-body">
+                <h3>旗津半島</h3>
+                <p>搭乘渡輪前往旗津，漫步旗津老街品嚐海鮮小吃，參觀旗後燈塔俯瞰高雄港全景，再到旗津海水浴場享受沙灘與海風。骑自行车暢遊海岸線是最佳玩法。</p>
+                <span class="tag">免費景點</span>
+                <span class="tag">海灘</span>
+                <span class="tag">渡輪</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">🏙️</div>
+            <div class="card-body">
+                <h3>高雄流行音樂中心</h3>
+                <p>由知名建築團隊設計，以海洋意象為主體的現代建築群。白天可欣賞建築之美，夜晚燈光秀更是璀璨奪目。周邊還有鯨魚親水廣場與海豚步道。</p>
+                <span class="tag">夜景</span>
+                <span class="tag">建築</span>
+                <span class="tag">免費</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">🎨</div>
+            <div class="card-body">
+                <h3>駁二藝術特區</h3>
+                <p>由舊港口倉庫群改建而成的文創園區，充滿裝置藝術、塗鴉牆面與特色小店。大義公園的貨櫃屋與小火車是熱門打卡點，還有定期更換的展覽。</p>
+                <span class="tag">文創</span>
+                <span class="tag">拍照</span>
+                <span class="tag">展覽</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">🌸</div>
+            <div class="card-body">
+                <h3>美濃客家文物館</h3>
+                <p>深入體驗美濃客家文化，欣賞傳統紙傘工藝、客家花布與文物展示。周邊可騎單車穿梭田間小路，品嚐道地粄條與客家料理。</p>
+                <span class="tag">文化</span>
+                <span class="tag">田園</span>
+                <span class="tag">DIY</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">🦁</div>
+            <div class="card-body">
+                <h3>壽山動物園</h3>
+                <p>全台最早设立的動物園之一，近年改建後煥然一新。可近距離觀賞台灣黑熊、孟加拉虎等動物，園區內還有觀景平台可眺望高雄市區與港口。</p>
+                <span class="tag">親子</span>
+                <span class="tag">戶外</span>
+                <span class="tag">半日遊</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">⛴️</div>
+            <div class="card-body">
+                <h3>愛河</h3>
+                <p>高雄最具代表性的河流，沿岸設有自行車道與步道。夜晚搭乘愛河愛之船，欣賞兩岸燈光映照水面的浪漫景色。河畔咖啡廳也是休憩好去處。</p>
+                <span class="tag">夜景</span>
+                <span class="tag">散步</span>
+                <span class="tag">免費</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 美食專區 -->
+<div class="section" id="food">
+    <div class="section-title"><h2>美食專區</h2></div>
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-img">🍜</div>
+            <div class="card-body">
+                <h3>六合夜市</h3>
+                <p>高雄最知名的觀光夜市，必吃木瓜牛奶、海產粥、鹽蒸蝦。整條街熱鬧非凡，從傍晚營業到深夜，是體驗高雄夜生活的好去處。</p>
+                <span class="tag">夜市</span>
+                <span class="tag">小吃</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">🦐</div>
+            <div class="card-body">
+                <h3>旗津海產街</h3>
+                <p>旗津老街上的海產一條街，新鮮現撈的海產平價又美味。推薦烤小卷、炒螃蟹、蒜蓉蒸蝦，搭配啤酒享受港邊氛圍。</p>
+                <span class="tag">海鮮</span>
+                <span class="tag">平價</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">🧋</div>
+            <div class="card-body">
+                <h3>興隆居傳統美食</h3>
+                <p>高雄在地早餐名店，招牌湯包與燒餅油條是必點。每天清晨排隊人潮不斷，是道地高雄人的早餐記憶。</p>
+                <span class="tag">早餐</span>
+                <span class="tag">排隊名店</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 旅遊資訊 -->
+<div class="section" id="tips">
+    <div class="section-title"><h2>旅遊資訊</h2></div>
+    <div class="cards">
+        <div class="card" style="grid-column: 1 / -1;">
+            <div class="card-body" style="padding: 30px;">
+                <h3>交通方式</h3>
+                <p style="line-height: 2;">
+                    <strong>捷運：</strong>高雄捷運紅線、橘線涵蓋主要景點，推薦購買一日券。<br>
+                    <strong>輕軌：</strong>環狀輕軌串連駁二、流行音樂中心、鳥松等景點。<br>
+                    <strong>渡輪：</strong>前往旗津可從鼓山渡輪站搭乘，船程約 5 分鐘。<br>
+                    <strong>租車：</strong>美濃、六龜等郊區景點建議租車或包車前往。<br>
+                    <strong>YouBike：</strong>市區遍布租借站，短程移動最方便。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>高雄景點導覽 &copy; 2026 | 資料來源：高雄市政府觀光局</p>
+</footer>
+
+</body>
+</html>
